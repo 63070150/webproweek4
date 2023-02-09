@@ -13,7 +13,7 @@ function showConfirm(callback) {
         display("ไม่ดีกว่า")
     }
 }
-
+//test git push
 // ข้อ 2.2
 function start() {
     // hint: ส่ง callback function เข้าไปเป็น argument ของ setTimeout()
