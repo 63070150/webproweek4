@@ -39,10 +39,10 @@ function start() {
 // ข้อ 2.3
 function stopTime() {
     let time = document.getElementById('Time').value
-    let min = Math.floor(time/60)
+    let min = Math.floor(time/60) //ปัดเศษลง
     let sec = time%60
     setInterval( () => {
-        document.getElementById('setSecond').innerHTML = String(sec).padStart(2, '0')
+        document.getElementById('setSecond').innerHTML = String(sec).padStart(2, '0') //padstart เติม0ข้างหน้าให้เต็มสองหลัก
         document.getElementById('setMinute').innerHTML = String(min).padStart(2, '0')
         if(sec==0 && min > 0){
             min -= 1
