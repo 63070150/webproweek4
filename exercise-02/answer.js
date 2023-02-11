@@ -8,9 +8,9 @@ function display(msg) {
 function showConfirm(callback) {
     // You code here
     if(window.confirm()){
-        display("ยืนยันจ้า")
+        callback("ยืนยันจ้า")
     }else{
-        display("ไม่ดีกว่า")
+        callback("ไม่ดีกว่า")
     }
 }
 
