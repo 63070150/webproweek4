@@ -23,15 +23,32 @@ function start() {
     setTimeout(, 1)
     setTimeout(process, 2000)
     setTimeout(end, 3000)*/
-    setTimeout( () => {
-        document.getElementById('start').innerHTML = "Program started"
-    }, 0)
-    setTimeout( () => {
-        let process = document.getElementById('process').innerHTML = "Hello World"
-    }, 2000)
-    setTimeout( () => {
-        let end = document.getElementById('end').innerHTML = "Program ended"
-    }, 3000)
+
+    // ยังผิด
+    // setTimeout( () => {
+    //     document.getElementById('start').innerHTML = "Program started"
+    // }, 0)
+    // setTimeout( () => {
+    //     let process = document.getElementById('process').innerHTML = "Hello World"
+    // }, 2000)
+    // setTimeout( () => {
+    //     let end = document.getElementById('end').innerHTML = "Program ended"
+    // }, 3000)
+
+    function delaytxt(locate, txt, time, callback){
+        setTimeout( () => {
+            document.getElementById(locate).innerHTML = txt
+            callback();
+        }, time)
+    }
+
+    delaytxt('start', "Program started", 0, () => {
+        delaytxt('process', "Hello World", 2000, () => {
+            delaytxt('end', "Program ended", 3000, () => {
+                
+            })
+        })
+    })
 
 }
 
